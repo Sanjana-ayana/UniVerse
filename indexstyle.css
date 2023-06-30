@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap");
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Rajdhani",sans-serif;
+}
+/*for the background*/
+.container{
+    min-height:100vh;
+    width:100%;
+    background-color:#181819;
+    background-image:linear-gradient(135deg,#15334E 0%, #181819 74%);
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    height:3rem;
+}
+
+.menu{
+    max-width:72rem;
+    width:100%;
+    margin:0 auto;
+    padding:0 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#ffffff;
+}
+
+/* for the webpagename */
+.logo{  
+    font-size:30px;
+   
+    text-transform:capitalize;
+    letter-spacing:2px;
+    line-height:4rem;
+}
+/*thins Verse*/
+.logo span{
+    font-weight:300;
+}
+
+.menudrop{
+    height:4rem;
+    width:2rem;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+
+.bar{
+    width:1.9rem;
+    height:1.5px;
+    border-radius:2px;
+    background-color:#eeeeee;
+    transition:0.5s;
+    position:relative;
+}
+
+.bar:before, .bar:after{
+    content:"";
+    position:absolute;
+    width:inherit; /*inherits from .bar*/
+    height:inherit;
+    background-color:#eeeeee;
+    transition:0.5s;
+}
+
+.bar:before{
+    transform:translateY(-9px);
+}
+
+.bar:after{
+    transform:translateY(9px);
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+  }
+  
+  header {
+    min-height: 100vh;
+    width: 100%;
+    background: url("amrita-bengaluru.png") no-repeat top center / cover;
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,26,36,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inner {
+    max-width: 35rem;
+    text-align: center;
+    color: #fff;
+    padding: 0 2rem;
+  }
+  
+  .title {
+    font-size: 2.7rem;
+  }
+  
+  button {
+    padding: 1em 2em;
+    border: none;
+    margin:1em;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #D4AF37;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #D4AF37;
+  }
+  
+  button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #D4AF37;
+    box-shadow: 4px 5px 17px -4px  #D4AF37;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color:  #D4AF37;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  button:hover::before {
+    width: 250%;
+  }
+  
+.container.active .bar{
+    transform: rotate(360deg);
+    background-color:transparent;
+}
+
+.container.active .bar:before{
+    transform:translateY(0) rotate(45deg);
+}
+
+.container.active .bar:after{
+    transform:translateY(0) rotate(-45deg);
+}
+
+.container.active .main {
+    animation: main-animation 0.5s ease;
+    cursor: pointer;
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+  
+  @keyframes main-animation {
+    from {
+      transform: translate(0);
+    }
+  
+    to {
+      transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+  }
+  
+  .links {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #eee;
+    padding: 0.7rem 0;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: hide 0.5s forwards ease;
+  }
+  
+  .links a:hover {
+    color: #fff;
+  }
+  
+  .container.active .links a {
+    animation: appear 0.5s forwards ease var(--i);
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes hide {
+    from {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: 0.5s;
+    background-color: white;
+  }
+  
+  .shadow.one {
+    z-index: -1;
+    opacity: 0.15;
+  }
+  
+  .shadow.two {
+    z-index: -2;
+    opacity: 0.1;
+  }
+  
+  .container.active .shadow.one {
+    animation: shadow-one 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+  
+  @keyframes shadow-one {
+    0% {
+      transform: translate(0);
+    }
+  
+    5% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+  
+    100% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+    }
+  }
+  
+  .container.active .shadow.two {
+    animation: shadow-two 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+  
+  @keyframes shadow-two {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+  
+    100% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+    }
+  }
+  
+  .container.active .main:hover + .shadow.one {
+    transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+  }
+  
+  .container.active .main:hover {
+    transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+  }
+
+  

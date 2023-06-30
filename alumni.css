@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap");
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #181819; 
+    background-image: linear-gradient(135deg, #15334E 0%, #181819 74%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+   /*For the navigation bar*/
+   .container{
+    width:100%;
+    margin-top:10px;
+    margin-left:100px;
+    text-align:left;
+    min-height:100vh;
+    font-size: x-large;
+}
+
+.navbar{
+    position:relative;
+    top:0;
+    left:0;
+    z-index:10;
+    height:3rem;
+}
+
+td{
+    align-items: inherit;
+    margin:20px;
+    padding:40px;
+}
+/* for the webpagename */
+
+/*thins Verse*/
+.logo span{
+    font-weight:300;
+}
+
+.myCard {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #D4AF37;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em #D4AF37;
+    font-weight: 700;
+  }
+  
+  .frontSide,
+  .frontSide::before {
+    background: linear-gradient(43deg, #ea005e 0%, #607196 46%, #FF7B9C 100%);
+  }
+  
+  .backSide,
+  .backSide::before {
+    background-image: linear-gradient(160deg, #FFC759 0%, #ea005e 100%);
+  }
+  
+  .backSide {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    /* filter: blur(20px); */
+    animation: animate 5s linear infinite;
+  }
+  
+   @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+  } 
+
+  img{
+  border-radius:10px;
+    height:60px;
+  }

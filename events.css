@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap");
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #181819; 
+    background-image: linear-gradient(135deg, #15334E 0%, #181819 74%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    font-family: 'Rajdhani', sans-serif;
+    width: 100%;
+  }
+  
+  thead th {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    background-color: #2c9caf;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  td {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    padding: 8px;
+  }
+ 
+.imgSlider{
+  width:100%;
+  height:540px;
+  background-image:url("https://media.istockphoto.com/id/1305092172/photo/people-holding-their-smart-phones-and-photographing-concert.jpg?s=612x612&w=0&k=20&c=Gomlflha2n8rZ3qViUT2Svxsci5i8NzjmhOSkt61pAk=");
+  background-size:100% 100%;
+  animation:changeImage 20s linear infinite;
+}
+
+@keyframes changeImage{
+  0%{
+    background-image:url("images/1.jpg");
+  }
+  25%{
+    background-image:url("images/2.jpg");
+  }
+  50%{
+    background-image:url("images/3.jpg");
+  }
+  75%{
+    background-image:url("images/4.jpg");
+  }
+ 100%{
+  background-image:url("images/5.jpg");
+ }
+}
+.date-btn1{
+   visibility:hidden;
+}
+  .date-btn {
+    font-family: 'Rajdhani', sans-serif;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #D4AF37;
+    color: #fff;
+    border: 2px solid #D4AF37;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: thin;
+    text-transform: uppercase;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #2c9caf;
+    margin: 10px;
+    padding: 1em 2em;
+
+  }
+  
+  .date-btn:hover {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    transform: scale(1.1);
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+  
+  .date-btn::before {
+    content: " ";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2c9caf;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .date-btn:hover::before {
+    width: 250%;
+  }
+  
+  .event-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .event-window-content {
+    background-color: black;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .event-window-content h3 {
+    margin-top: 0;
+  }
+  
+  #close-btn {
+    background-color: #2c9caf;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  #close-btn:hover {
+    background-color: #006666;
+  }
+  
+  .month-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .month-container h2 {
+    margin: 0;
+  }
+  
+  .month {
+    font-family: 'Rajdhani', sans-serif;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /*For the navigation bar*/
+  .container{
+    min-height:100vh;
+    font-size: x-large;
+    background-color:#181819;
+    background-image:linear-gradient(135deg,#15334E 0%, #181819 74%);
+}
+
+.navbar{
+    position:relative;
+    top:0;
+    left:0;
+    z-index:10;
+    height:3rem;
+}
+
+
+/* for the webpagename */
+
+/*thins Verse*/
+.logo span{
+    font-weight:300;
+}

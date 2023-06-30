@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap');
+    table{
+        padding:20px;
+        border:5px inset #FF1F57;
+        width: 100%;
+        margin:10px 10px 10px 10px;
+        
+        font-family:Rajdhani;
+    }
+    td{
+        margin:40px;
+        padding:25px;
+        border-radius:5px;
+    }
+    body{
+        align-content: center;
+        margin:10px;
+        padding:10px;
+        border:0px;
+        /* background-color:#181819; */
+        background-image:linear-gradient(135deg,#15334E 0%, #181819 74%);
+        font-family:Rajdhani;
+    }
+    .container{
+    min-height:100vh;
+    width:100%;
+    background-color:#181819;
+    background-image:linear-gradient(135deg,#15334E 0%, #181819 74%);
+}
+
+.navbar{
+    position:sticky;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    /* height:3rem; */
+    background-color:#181819;
+    background-image:linear-gradient(135deg,#15334E 0%, #181819 74%);
+}
+.menu{
+    max-width:72rem;
+    width:100%;
+    margin:0 auto;
+    padding:0 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#ffffff;
+}
+
+/* for the webpagename */
+.logo{  
+    font-weight:600;
+    text-transform:capitalize;
+    letter-spacing:2px;
+    line-height:4rem;
+}
+/*thins Verse*/
+.logo span{
+    font-weight:300;
+}
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <h1 class="logo">Uni<span>Verse</span></h1>
+        </div>
+    </div>
+    
+    <table>
+<tr>
+    <td style="background-color:#FFC759" id="Profile">
+    
+    <h1>Your Profile</h1>
+    <h5>Edit and Manage your profile</h5>
+    <a href="profilecard.html"><button>Edit profile</button></a>
+    </td>
+
+    <td style="background-color:#FF7B9C;" id="Friends">
+    
+        <h1>Friends and Groups</h1>
+        <h5>Connect with your peers</h5>
+        <a href="messages.html"><button>Message now</button></a>
+        </td>
+</tr>
+<tr>
+    
+    <td style="background-color:#607196;" id="Events">
+        <h1>Events Calender</h1>
+        <h5>Events to happen in our campus</h5>
+        <a href="events.html"><button>Explore</button></a>
+        </td>
+    
+        <td style="background-color:#BABFD1;" id="Alumni">
+            <h1>Alumni</h1>
+            <h5>Connect with alumni</h5>
+          <a href="alumnifin.html"><button>Message</button></a>  
+        </td>
+</tr>
+    </table>
+</body>
+</html>

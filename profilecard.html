@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="profilecard.css">
+    <script>
+        function Follow(){
+            let name=document.getElementById("name").innerHTML;
+            alert("You started following "+name);
+            document.getElementById("follow").innerHTML="Following";
+        }
+
+        function Edit(){
+            let Name=document.getElementById("name").innerHTML;
+            let Newname=prompt("Enter new name: ");
+            if (Newname=="")
+            document.getElementById("name").innerHTML=Name;
+            else
+            document.getElementById("name").innerHTML=Newname;
+
+            let Bio=document.getElementById("bio").innerHTML;
+            let NewBio=prompt("Enter new Bio: ");
+            if (NewBio=="")
+            document.getElementById("bio").innerHTML=Bio;
+            else
+            document.getElementById("bio").innerHTML=NewBio;
+
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h2 class="logo">Uni<span>Verse</span>&nbsp;-&nbsp;Profile <span>Card</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="menu.html" > <img id="home" src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png" alt="home--v1"/></a>
+                  
+                </h2>
+            </div>
+        </div>
+    
+    <div class="container1">
+        <div class="profile-card">
+            <img src="https://t3.ftcdn.net/jpg/00/68/73/70/360_F_68737044_HsWBd4bcYm61k6iF4o52UQauZIDe4SlC.jpg" class="cover-pic">
+            <img src="kitten.jpeg" class="profile-pic">
+            <h1 id="name">Sanjana R</h1>
+            <p id="bio">bio text goes here</p>
+            <table width="100%">
+                <tr>
+                    <td>Followers</td>
+                    <td>Following</td>
+                </tr>
+                <tr>
+                    <td>1050</td>
+                    <td>1056</td>
+                </tr>
+            </table>
+           <!--<button class="follow-btn" id = "follow" onClick="Follow();">Follow</button>-->
+           <button class="edit-btn" id="edit" onClick="Edit();">Edit profile</button>
+        </div>
+    </div>
+</body>
+</html>

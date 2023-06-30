@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap");
+
+*{
+    padding:0;
+    margin:0px;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Rajdhani",sans-serif;
+
+}
+/*For the navigation bar*/
+.container{
+    width:100%;
+    padding-left:17px;
+    padding-right:17px;
+    padding-top:10px;
+    text-align:left;
+    min-height:100vh;
+    font-size: x-large;
+    background-image: linear-gradient(135deg, #15334E 0%, #181819 74%);
+    color:white;
+}
+
+.navbar{
+    position:relative;
+    top:0;
+    left:0;
+    z-index:10;
+    height:3rem;
+}
+
+
+#home{
+    height:30px;
+    width:30px;
+    }
+  /* for the webpagename */
+  
+  /*thins Verse*/
+  .logo span{
+      font-weight:300;
+  }
+
+
+
+  header {
+     background-color:rgb(206, 93, 93);
+ /* background-image:linear-gradient(135deg,#15334E 0%,#181819 74%);;*/
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .chat-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+     background-color:#181819;
+     border: 2px solid rgba(206, 93, 93, 0.564);
+  background-image:linear-gradient(135deg,#15334E 0%,#181819 74%);;
+  }
+  
+  .chat-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid rgba(206, 93, 93, 0.564);
+    cursor: pointer;
+    /*<button onclick="window.location.href = 'UIDhtml.html';">HOME</button>*/
+  }
+  
+  .chat-item:hover {
+    background-color:rgba(0, 0, 0, 0.564);
+  }
+  
+  .chat-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .chat-item .chat-details {
+    flex-grow: 1;
+  }
+  
+  .chat-item .chat-name {
+    font-weight: bold;
+    color:rgb(206, 93, 93);
+  }
+  
+  .chat-item .chat-message {
+    color: #cecece;
+  }
+  
+  .chat-item .chat-time {
+    color: #777;
+    font-size: 12px;
+  }

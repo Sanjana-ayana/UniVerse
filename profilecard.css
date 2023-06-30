@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap");
+
+body{
+    margin:0;
+    padding:0;
+    font-family:'Rajdhani',sans-serif;
+    box-sizing:border-box;
+    width:100%;
+    min-height:100vh;
+    background-color:#181819;
+    background-image:linear-gradient(135deg,#15334E 0%, #181819 74%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/*For the navigation bar*/
+.container{
+    width:100%;
+    margin-top:10px;
+    margin-left:87px;
+    text-align:left;
+    min-height:100vh;
+    font-size: x-large;
+    color:white;
+}
+
+.navbar{
+    position:relative;
+    top:0;
+    left:0;
+    z-index:10;
+    height:3rem;
+}
+
+
+#home{
+    height:30px;
+    width:30px;
+    }
+  /* for the webpagename */
+  
+  /*thins Verse*/
+  .logo span{
+      font-weight:300;
+  }
+
+
+.profile-card{
+    margin-left:340px;
+    margin-top:100px;
+    width:90%;
+    max-width:650px;
+    /* max-height:650px; */
+    text-align:center;
+    color:white;
+    font-size:25px;
+    background-color:rgba(0,0,0,0.1);
+    border:5px inset rgba(206, 93, 93, 0.564);
+
+}
+
+.cover-pic{
+    display:block;
+    width:100%;
+   
+}
+
+.profile-pic{
+    width:125px;
+    border-radius:100%;
+    margin-top:-70;
+    position:relative;
+    margin-top:-75px;
+
+}
+
+.profile-card h1{
+    font-weight:600;
+}
+
+.follow-btn{
+    display:inline-block;
+    font-style:'Rajdhani';
+    text-decoration:none;
+    background-color: inherit;
+    border:1px solid rgba(206, 93, 93, 0.564);;
+    color:white;
+    font-size: 45px;
+    padding:6px 35px;
+    margin:25px 0;
+}
+
+.edit-btn{
+    text-decoration:none;
+    background-color: inherit;
+    border:1px solid rgba(206, 93, 93, 0.564);;
+    color:white;
+    font-size: 45px;
+    padding:6px 35px;
+    margin:25px 0;
+}

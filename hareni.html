@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Area</title>
+  <style>
+ @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap");
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #181819; 
+    background-image: linear-gradient(135deg, #15334E 0%, #181819 74%);
+    color: white;
+    
+    min-height: 100vh;
+    margin: 10px;
+  }
+    #chat-container {
+      width: 100%;
+      height:100%;
+      
+      overflow-y: scroll;
+       
+    }
+    
+    .message {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .sender {
+      font-weight: bold;
+    }
+    
+    .message-body {
+      border:1px solid white;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    
+    .input-container {
+      display: flex;
+    
+    }
+    
+    #message-input {
+      flex-grow: 1;
+      padding: 5px;
+    }
+    
+    #send-button {
+      padding: 5px 10px;
+    }
+    input[type=text] {
+  border: 2px inset rgba(206, 93, 93, 0.564);
+  border-radius: 4px;
+  background-color:#181819;
+  color:white;
+}
+button{
+  border: 2px inset rgba(206, 93, 93, 0.564);
+  border-radius: 4px;  
+  background-color:#181819;
+}
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <div class="message">
+      <span class:sender style="color:white;">You:</span>
+      <div class="message-body">when do you need it?</div>
+    </div>
+    <div class="message">
+      <span class:sender style="color:white;">Hareni:</span>
+      <div class="message-body">i knew about it</div>
+    </div>
+    <!-- Add more messages here -->
+  </div>
+  
+  <div class="input-container">
+    <input type="text" id="message-input" placeholder="Type your message">
+    <button id="send-button"><img width="50" height="50" src="https://img.icons8.com/clouds/100/sent.png" alt="sent"/></button>
+  </div>
+  
+  <script>
+    const chatContainer = document.getElementById('chat-container');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', function() {
+      const messageText = messageInput.value;
+      if (messageText.trim() !== '') {
+        const message = createMessage('You', messageText);
+        chatContainer.appendChild(message);
+        messageInput.value = '';
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+    });
+    
+    function createMessage(sender, message) {
+      const messageElement = document.createElement('div');
+      messageElement.className = 'message';
+      
+      const senderElement = document.createElement('span');
+      senderElement.className = 'sender';
+      senderElement.textContent = sender + ':';
+      
+      const messageBodyElement = document.createElement('div');
+      messageBodyElement.className = 'message-body';
+      messageBodyElement.textContent = message;
+      
+      messageElement.appendChild(senderElement);
+      messageElement.appendChild(messageBodyElement);
+      
+      return messageElement;
+    }
+  </script>
+</body>
